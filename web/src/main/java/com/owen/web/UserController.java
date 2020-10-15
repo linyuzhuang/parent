@@ -27,7 +27,7 @@ public class UserController {
     @RequestMapping(value = "/save/{name}/{age}/{address}",method = RequestMethod.GET)
     public String saveUserInfo(@PathVariable(name = "name")String name,@PathVariable(name = "age")Integer age,@PathVariable(name = "address")String address,ModelMap modelMap){
         User user= userService.saveUser(name,age,address);
-        return user.toString();
+        return user.toString() + "修改了文件";
     }
 
 }
